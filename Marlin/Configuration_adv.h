@@ -1,3 +1,9 @@
+//  Edits hereto:
+//    DEFAULT_STEPPER_DEACTIVE_TIME to 0 to deactivate stepper deactivation
+//    SAVED_POSITIONS uncommented and changed from 1 to 3, to enable saved position slots.
+
+
+#if 1 // Source Code File Header
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
@@ -32,10 +38,13 @@
  */
 #define CONFIGURATION_ADV_H_VERSION 020007
 
+#endif 
+
+#if 1 // @section temperature
+
 //===========================================================================
 //============================= Thermal Settings ============================
 //===========================================================================
-// @section temperature
 
 /**
  * Thermocouple sensors are quite sensitive to noise.  Any noise induced in
@@ -354,7 +363,10 @@
 // This shouldn't need to be more than 30 seconds (30000)
 //#define MILLISECONDS_PREHEAT_TIME 0
 
-// @section extruder
+
+#endif 
+
+#if 1 // @section extruder
 
 // Extruder runout prevention.
 // If the machine is idle and the temperature over MINTEMP
@@ -379,7 +391,11 @@
   #define HOTEND_IDLE_BED_TARGET      0     // (°C) Safe temperature for the bed after timeout
 #endif
 
-// @section temperature
+
+
+#endif 
+
+#if 1 // @section temperature
 
 // Calibration for AD595 / AD8495 sensor to adjust temperature measurements.
 // The final temperature is calculated as (measuredTemp * GAIN) + OFFSET.
@@ -460,7 +476,10 @@
   //#define USE_OCR2A_AS_TOP
 #endif
 
-// @section extruder
+
+#endif 
+
+#if 1 // @section extruder
 
 /**
  * Extruder cooling fans
@@ -518,13 +537,19 @@
   #endif
 #endif
 
-// @section homing
+
+#endif 
+
+#if 1 // @section homing
 
 // If you want endstops to stay on (by default) even when not homing
 // enable this option. Override at any time with M120, M121.
 //#define ENDSTOPS_ALWAYS_ON_DEFAULT
 
-// @section extras
+
+#endif 
+
+#if 1 // @section extras
 
 //#define Z_LATE_ENABLE // Enable Z the last moment. Needed if your Z driver overheats.
 
@@ -643,7 +668,10 @@
 // Define SOL0_PIN, SOL1_PIN, etc., for each extruder that has a solenoid.
 //#define EXT_SOLENOID
 
-// @section homing
+
+#endif 
+
+#if 1 // @section homing
 
 /**
  * Homing Procedure
@@ -662,7 +690,10 @@
 //#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
 //#define CODEPENDENT_XY_HOMING               // If X/Y can't home without homing Y/X first
 
-// @section bltouch
+
+#endif 
+
+#if 1 // @section bltouch
 
 #if ENABLED(BLTOUCH)
   /**
@@ -731,7 +762,10 @@
 
 #endif // BLTOUCH
 
-// @section extras
+
+#endif 
+
+#if 1 // @section extras
 
 /**
  * Z Steppers Auto-Alignment
@@ -820,7 +854,10 @@
 
 #endif
 
-// @section motion
+
+#endif 
+
+#if 1 // @section motion
 
 #define AXIS_RELATIVE_MODES { false, false, false, false }
 
@@ -990,8 +1027,10 @@
 // Microstep settings (Requires a board with pins named X_MS1, X_MS2, etc.)
 #define MICROSTEP_MODES { 16, 16, 16, 16, 16, 16 } // [1,2,4,8,16]
 
-/**
- *  @section  stepper motor current
+
+#endif 
+
+#if 1 /** @section  stepper motor current
  *
  *  Some boards have a means of setting the stepper motor current via firmware.
  *
@@ -1046,7 +1085,10 @@
 //=============================Additional Features===========================
 //===========================================================================
 
-// @section lcd
+
+#endif 
+
+#if 1 // @section lcd
 
 #if EITHER(ULTIPANEL, EXTENSIBLE_UI)
   #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
@@ -1580,7 +1622,10 @@
   #define ADC_BUTTON_DEBOUNCE_DELAY 16  // Increase if buttons bounce or repeat too fast
 #endif
 
-// @section safety
+
+#endif 
+
+#if 1 // @section safety
 
 /**
  * The watchdog hardware timer will do a reset and disable all outputs
@@ -1596,7 +1641,10 @@
   //#define WATCHDOG_RESET_MANUAL
 #endif
 
-// @section lcd
+
+#endif 
+
+#if 1 // @section lcd
 
 /**
  * Babystepping enables movement of the axes by tiny increments without changing
@@ -1635,7 +1683,10 @@
   #endif
 #endif
 
-// @section extruder
+
+#endif 
+
+#if 1 // @section extruder
 
 /**
  * Linear Pressure Control v1.5
@@ -1660,7 +1711,10 @@
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
 
-// @section leveling
+
+#endif 
+
+#if 1 // @section leveling
 
 /**
  * Points to probe for all 3-point Leveling procedures.
@@ -1783,7 +1837,10 @@
   #endif
 #endif
 
-// @section extras
+
+#endif 
+
+#if 1 // @section extras
 
 //
 // G60/G61 Position Save and Return
@@ -1877,7 +1934,10 @@
  */
 //#define MAXIMUM_STEPPER_RATE 250000
 
-// @section temperature
+
+#endif 
+
+#if 1 // @section temperature
 
 // Control heater 0 and heater 1 in parallel.
 //#define HEATERS_PARALLEL
@@ -1886,7 +1946,10 @@
 //================================= Buffers =================================
 //===========================================================================
 
-// @section motion
+
+#endif 
+
+#if 1 // @section motion
 
 // The number of linear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
@@ -1898,7 +1961,10 @@
   #define BLOCK_BUFFER_SIZE 16
 #endif
 
-// @section serial
+
+#endif 
+
+#if 1 // @section serial
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
@@ -1964,7 +2030,10 @@
 // For serial echo, the number of digits after the decimal point
 //#define SERIAL_FLOAT_PRECISION 4
 
-// @section extras
+
+#endif 
+
+#if 1 // @section extras
 
 /**
  * Extra Fan Speed
@@ -2134,7 +2203,10 @@
   //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
 #endif
 
-// @section tmc
+
+#endif 
+
+#if 1 // @section tmc
 
 /**
  * TMC26X Stepper Driver options
@@ -2242,7 +2314,10 @@
 
 #endif // TMC26X
 
-// @section tmc_smart
+
+#endif 
+
+#if 1 // @section tmc_smart
 
 /**
  * To use TMC2130, TMC2160, TMC2660, TMC5130, TMC5160 stepper drivers in SPI mode
@@ -2603,7 +2678,10 @@
 
 #endif // HAS_TRINAMIC_CONFIG
 
-// @section L64XX
+
+#endif 
+
+#if 1 // @section L64XX
 
 /**
  * L64XX Stepper Driver options
@@ -2797,7 +2875,10 @@
 
 #endif // HAS_L64XX
 
-// @section i2cbus
+
+#endif 
+
+#if 1 // @section i2cbus
 
 //
 // I2C Master ID for LPC176x LCD and Digital Current control
@@ -2838,7 +2919,10 @@
   #define I2C_SLAVE_ADDRESS  0  // Set a value from 8 to 127 to act as a slave
 #endif
 
-// @section extras
+
+#endif 
+
+#if 1 // @section extras
 
 /**
  * Photo G-code
@@ -3570,7 +3654,10 @@
   //#define SERVICE_INTERVAL_3    1 // print hours
 #endif
 
-// @section develop
+
+#endif 
+
+#if 1 // @section develop
 
 //
 // M100 Free Memory Watcher to debug memory usage
@@ -3589,3 +3676,5 @@
 
 // Enable Marlin dev mode which adds some special commands
 //#define MARLIN_DEV_MODE
+
+#endif

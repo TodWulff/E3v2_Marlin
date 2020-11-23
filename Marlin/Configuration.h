@@ -1,3 +1,8 @@
+//  Edits hereto:
+//    NOZZLE_TO_PROBE_OFFSET to reflect Herome5 gen 2 setup with blt
+//    GRID_MAX_POINTS_X from 5 to 3
+//    ABS settings to PETG
+
 #if 1 // Source Code File Header
 /**
  * Marlin 3D Printer Firmware
@@ -469,7 +474,7 @@
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
-#define HEATER_0_MINTEMP   0
+#define HEATER_0_MINTEMP   5  // taw: was 0 
 #define HEATER_1_MINTEMP   5
 #define HEATER_2_MINTEMP   5
 #define HEATER_3_MINTEMP   5
@@ -477,7 +482,7 @@
 #define HEATER_5_MINTEMP   5
 #define HEATER_6_MINTEMP   5
 #define HEATER_7_MINTEMP   5
-#define BED_MINTEMP        0
+#define BED_MINTEMP        5  // taw: was 0
 
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
@@ -856,7 +861,7 @@
 
 #endif // @section motion
 
-#if 1 // @section probes
+#if 1 // @section probes                        ###### NOZZLE_TO_PROBE_OFFSET
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1237,7 +1242,7 @@
 
 #endif // @section machine (bed goemetry, sw endstops, filament runout)
 
-#if 1 // @section calibrate (Bed Leveling)
+#if 1 // @section calibrate (Bed Leveling)      ###### GRID_MAX_POINTS_X 
 
 //===========================================================================
 //=============================== Bed Leveling ==============================
@@ -1551,7 +1556,7 @@
 
 #endif // @section extras (flash settings, barbarian units)
 
-#if 1 // @section temperature (Material Presets)
+#if 1 // @section temperature (Material Presets)  #####  replaced ABS with PETG settings
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
