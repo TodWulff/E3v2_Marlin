@@ -1,0 +1,53 @@
+Updated 02-10-2020 [V2.0.X.13] 
+-Resume Printing is now working properly
+-Support MicroSD card extension cable (no longer need to reseat extension or restart printer)
+-Default Refuel mm to 10mm
+-Enable #define ENDSTOPPULLUPS (Credit to to Dimitris)
+-Prevent changes of zoffset when just turning the knob during live
+-Adding more precompiled firmwares for Filament Sensor & 4.2.7 Mobo
+-Updated to the latest Marlin (02-10-2020)
+
+Updated 21-9-2020 [V2.0.X.12] 
+-English on boot
+-Updated to the latest Marlin (21-09-2020)
+
+Updated 19-9-2020 [V2.0.X.10~11] - allow estep over 186
+-Bug fixes for Z offset tools (much better accuracy) 
+-Allow E-step over 186, up to 850
+-Updated to the latest Marlin (18-09-2020)
+-Added Advance Refuel Menu for Filament Retract & Feed
+
+Updated 8-9-2020 [V2.0.X.9] - Filename longer than 22 chars
+-Fixed issue where print resume cancel does not cancel the print
+-Updated to the latest Marlin (08-09-2020)
+-Support filename that is longer than 20 characters.
+
+Updated 16-8-2020 [V2.0.X.8] - Z-Tool Offset Bug Fixes
+-Enabled BLTouch High Speed Mode (Experimental)
+-Enabled BLTOUCH_HS_MODE (in configuration_adv.h)
+-Adjusted Z_CLEARANCE_MULTI_PROBE to 2
+-HOMING_FEEDRATE_Z bumped from 4*60 to 6*60
+
+Updated 13-8-2020 [V2.0.X.7] - Z-Tool Offset Bug Fixes
+-Fixed issue where Z-offset tool may not reflect the actual z changes when adjusting real-time
+-Added "Re-Home Z" button in Z-offset tool so user can make changes and test real Z immediately.
+-It's very important to heat up nozzle to 180-200 while using Z-offset Tool (if there is PLA in nozzle) Else the Z-offset will vary a lot depending on the leftover material stuck on nozzle tip.
+-Enabled ADVANCED_PAUSE_FEATURE
+
+Updated 1-8-2020 [V2.0.X.6B] - Major Update.
+-Updated BLTouch to use 5 pins port provided by the board. Replacing Z Stop Switch is no longer required. (If you still have your old wiring done based on our older guide you will need to change it in order to flash 2.0.x.6 firmware) We believe this is a step forward as it gives you the flexibility to switch to other firmware without the hassle of changing the wiring.
+-EEPROM is now saved within the board instead of SD card.
+-Changing Z-offset now works when printing. Will be reflected immediately. Store configuration if you want it to be persistent across reboots.
+-Pausing works on the printer now. Which means file like CHEP's leveling gcode will work.
+-Added white borders to Tune/Pause/Stop buttons
+-Improved Z Offset tool (Remember to pre-heat your nozzle while using this as any remaining material stuck on nozzle tip might interfere with the result when you gauge with A4 paper)
+-Corrected most labels and typos in DWIN UI
+-Updated Marlin to the latest build (1st August 2020)
+
+Updated 28-7-2020 [V2.0.X.5]
+-Fixed AUX Leveling Bug and added support for M48 command. 
+-Adjusted XY speed to be a little bit faster when auto-leveling
+
+Updated 25-7-2020 [V2.0.X.4]
+-Adjusted max bed size back to 220 as some users are facing issue where it's printing outside of edge. 
+-Previous version was using value of 220 + 15 as it helps BLTouch to probe nearer to edge for better mesh output.
