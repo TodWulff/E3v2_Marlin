@@ -2,7 +2,6 @@
 //    DEFAULT_STEPPER_DEACTIVE_TIME to 0 to deactivate stepper deactivation
 //    SAVED_POSITIONS uncommented and changed from 1 to 3, to enable saved position slots.
 
-
 #if 1 // Source Code File Header
 /**
  * Marlin 3D Printer Firmware
