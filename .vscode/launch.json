@@ -1,0 +1,36 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "c:/Users/TodWu/Documents/GitRepos/E3v2_Marlin/.pio/build/STM32F103RET6_creality/firmware-20201123-173826.elf",
+            "projectEnvName": "STM32F103RET6_creality",
+            "toolchainBinDir": "C:/Users/TodWu/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/TodWu/.platformio/platforms/ststm32/misc/svd/STM32F103xx.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug (STM32F103RET6_creality)"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "c:/Users/TodWu/Documents/GitRepos/E3v2_Marlin/.pio/build/STM32F103RET6_creality/firmware-20201123-173826.elf",
+            "projectEnvName": "STM32F103RET6_creality",
+            "toolchainBinDir": "C:/Users/TodWu/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/TodWu/.platformio/platforms/ststm32/misc/svd/STM32F103xx.svd",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
